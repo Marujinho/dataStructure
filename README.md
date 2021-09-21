@@ -1,2 +1,3 @@
-# dataStructure
-Most Common data structure written in php
+# DATA STRUCTURES PHP
+
+Most Common data structure written in php 7.4
