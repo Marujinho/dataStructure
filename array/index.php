@@ -100,7 +100,7 @@ class Arr {
 
 $arr = new Arr(['a', 'b', 'c', 'd', 'e']);
 $arr->insert(2, "GG");
-$arr->delete(3);
-$arr->insert(3, "JJ");
-$arr->delete(0);
+$arr->delete(2);
+// $arr->insert(3, "JJ");
+// $arr->delete(0);
 
