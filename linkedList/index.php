@@ -2,8 +2,8 @@
 
 class Node {
 
-    private $data;
-    private $next;
+    public $data;
+    public $next;
 
     public function __construct($data)
     {
@@ -159,13 +159,30 @@ class LinkedList {
        return;
     }
 
+    public function reverse() {
+        $prev = null;
+        $current = $this->head;
+            
+        while($current != null){
+           $next = $current->next;
+           $current->next = $prev;
+           $prev = $current;
+           $current = $next;
+           $this->head = $prev;
+        }
+       
+       return $this->head;
+   }
+
 }
 
 $linkedList = new LinkedList();
-$linkedList->addFront('AA');
-$linkedList->addFront('BB');
-$linkedList->addFront('CC');
-$linkedList->deleteValue('AA');
+$linkedList->addLast('AA');
+$linkedList->addLast('BB');
+$linkedList->addLast('CC');
+print_r($linkedList->getHead());
+$linkedList->reverse();
+// $linkedList->deleteValue('AA');
 print_r($linkedList->getHead());
 
 
