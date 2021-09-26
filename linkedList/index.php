@@ -174,16 +174,32 @@ class LinkedList {
        return $this->head;
    }
 
+   public function middleNode() {
+        
+    $slow = $this->head;
+    $fast = $this->head;
+        
+    while($fast && $fast->next){
+        $slow = $slow->next;
+        $fast = $fast->next->next;
+    }
+    
+    return $slow;
+    
+}
+
 }
 
 $linkedList = new LinkedList();
 $linkedList->addLast('AA');
 $linkedList->addLast('BB');
 $linkedList->addLast('CC');
-print_r($linkedList->getHead());
-$linkedList->reverse();
+// $linkedList->addLast('DD');
+// $linkedList->addLast('EE');
+// print_r($linkedList->getHead());
+// $linkedList->reverse();
 // $linkedList->deleteValue('AA');
-print_r($linkedList->getHead());
+// print_r($linkedList->middleNode());
 
 
 
